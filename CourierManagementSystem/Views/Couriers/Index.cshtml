@@ -1,0 +1,91 @@
+﻿@model IEnumerable<CourierManagementSystem.Models.Courier>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="row">
+    <div class="text-end">
+        <a asp-action="Create" style="width:150px;" class="btn btn-primary">
+            <i class="fa-solid fa-circle-plus"></i> Add Courier
+        </a>
+    </div>
+</div>
+
+<div class="container">
+    <h1>List of Couriers</h1><hr />
+    <table class="table table-striped table-hover mt-4" id="dt">
+        <thead>
+            <tr class="table-primary">
+                <th scope="col">Consignment No</th>
+                <th scope="col">Status</th>
+                <th scope="col">Customer Name</th>               
+                <th scope="col">Customer Mobile</th>
+                <th scope="col">Recipient Name</th>
+                <th scope="col">Recipient Address</th>
+                <th scope="col">Recipient Mobile</th>
+                <th scope="col">Date Of Place</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ConsignmentNo</td>
+                    <td>@item.Status?.Name</td>
+                    <td>@item.CustomerName</td>
+                    <td>@item.CustomerMobile</td>
+                    <td>@item.RecipientName</td>
+                    <td>@item.RecipientAddress</td>
+                    <td>@item.RecipientMobile</td>
+                    <td>@item.DateOfPlace</td>
+                    <td>
+                        <div class="w-20 btn-group" role="group">
+                            <a  class="btn btn-primary mx-1" asp-action="Edit" asp-route-id="@item.ConsignmentNo">
+                                <i class="fa-solid fa-pen-to-square"></i> Edit
+                            </a>
+                            <a class="btn btn-success mx-1" asp-action="Details" asp-route-id="@item.ConsignmentNo">
+                                <i class="fa-solid fa-circle-info"></i> Details
+                            </a>
+                            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ConsignmentNo">
+                                <i class="fa-solid fa-trash"></i> Delete
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>
+
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#dt').DataTable();
+
+            var success = @Html.Raw(Json.Serialize(TempData["success"]));
+            if (success != null) {
+                Swal.fire({
+                    icon: 'success',
+                    title: success,
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            }
+        });
+    </script>
+
+    <style>
+        .dataTables_filter {
+            margin-bottom: 20px;
+        }
+    </style>
+    <script type="text/javascript">
+      
+    </script>
+
+}

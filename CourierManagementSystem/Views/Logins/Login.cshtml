@@ -1,0 +1,38 @@
+﻿@model CourierManagementSystem.Models.Login
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="pt-3">
+    <div class="row pt-4">
+        <div class="mx-auto col-10 col-md-8 col-lg-6">
+            <h2 class="text-success">Login</h2>
+            <hr />
+            <form asp-action="Login">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <h2 class="text-danger">
+                    @TempData["LoginError"]
+                </h2>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <input type="submit" value="Login" class="btn btn-primary" style="width:150px" />
+                    <a asp-action="Index" asp-controller="Home" class="btn btn-secondary">Back</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+   }
