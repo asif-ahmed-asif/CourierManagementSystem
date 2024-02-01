@@ -292,3 +292,4 @@ D:\ASP .NET Projects\CourierManagementSystem\CourierManagementSystem\obj\Debug\n
 D:\ASP .NET Projects\CourierManagementSystem\CourierManagementSystem\obj\Debug\net6.0\CourierManagementSystem.pdb
 D:\ASP .NET Projects\CourierManagementSystem\CourierManagementSystem\obj\Debug\net6.0\CourierManagementSystem.genruntimeconfig.cache
 D:\ASP .NET Projects\CourierManagementSystem\CourierManagementSystem\obj\Debug\net6.0\ref\CourierManagementSystem.dll
+D:\ASP .NET Projects\CourierManagementSystem\CourierManagementSystem\obj\Debug\net6.0\CourierManagementSystem.sourcelink.json

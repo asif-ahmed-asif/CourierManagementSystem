@@ -1,0 +1,9 @@
+D:\ASP .NET Projects\CourierManagementSystem\RDLC\bin\Debug\RDLC.exe.config
+D:\ASP .NET Projects\CourierManagementSystem\RDLC\bin\Debug\RDLC.exe
+D:\ASP .NET Projects\CourierManagementSystem\RDLC\bin\Debug\RDLC.pdb
+D:\ASP .NET Projects\CourierManagementSystem\RDLC\obj\Debug\RDLC.csproj.AssemblyReference.cache
+D:\ASP .NET Projects\CourierManagementSystem\RDLC\obj\Debug\RDLC.Properties.Resources.resources
+D:\ASP .NET Projects\CourierManagementSystem\RDLC\obj\Debug\RDLC.csproj.GenerateResource.cache
+D:\ASP .NET Projects\CourierManagementSystem\RDLC\obj\Debug\RDLC.csproj.CoreCompileInputs.cache
+D:\ASP .NET Projects\CourierManagementSystem\RDLC\obj\Debug\RDLC.exe
+D:\ASP .NET Projects\CourierManagementSystem\RDLC\obj\Debug\RDLC.pdb
